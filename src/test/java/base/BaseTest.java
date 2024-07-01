@@ -31,32 +31,26 @@ public class BaseTest {
 			prop.load(fr);
 		}
 		
-		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-				
-			WebDriverManager.chromedriver().setup();
-			//WebDriverManager.chromedriver().browserVersion("124.0.6367.208").setup();
-	        ChromeOptions options = new ChromeOptions();
-	        options.addArguments("--disable-cache"); // Add this line to disable cache
-	        driver = new ChromeDriver(options);
-			 driver.manage().window().maximize();
-			driver.get(prop.getProperty("UAT"));
-		}
-		else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
-			
-			WebDriverManager.firefoxdriver().setup();
-			 driver = new FirefoxDriver();
-			driver.get(prop.getProperty("UAT"));
-		}
-		
-		else if (prop.getProperty("browser").equalsIgnoreCase("edge")) {
-			
-			WebDriverManager.edgedriver().setup();
-			 driver = new EdgeDriver();
-			driver.get(prop.getProperty("UAT"));
+		// Setup WebDriver based on browser property
+        if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-cache");
+            if (prop.getProperty("headless").equalsIgnoreCase("true")) {
+                options.addArguments("--headless");
+            }
+            driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
+        } else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+            driver.manage().window().maximize();
+        }
+
+        // Navigate to UAT URL
+        driver.get(prop.getProperty("UAT"));
 		}
 		
-		
-	}
 
 	@AfterTest
 	public void tearDown() {
