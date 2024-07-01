@@ -18,7 +18,7 @@ import base.BaseTest;
 
 public class Billing extends BaseTest {
 
-	@Test(priority=0)
+	
 	public static void Logintest() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -39,7 +39,7 @@ public class Billing extends BaseTest {
 
 	}
 
-	
+	@Test(priority=0)
 	public static void OPBill() throws AWTException, InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -155,7 +155,7 @@ public class Billing extends BaseTest {
 		System.out.println("After paying the OP Bill - Bill Status  : " + AfterPaidStatus);
 	}
 
-
+	@Test(priority=1)
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -302,15 +302,15 @@ public class Billing extends BaseTest {
 	}
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public static void Scan_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		
-//		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
-//		JavascriptExecutor executor = (JavascriptExecutor) driver;
-//		executor.executeScript("arguments[0].click();", menuIcon);
-//		Thread.sleep(5000);
+		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", menuIcon);
+		Thread.sleep(5000);
 
 		WebElement viewAppointmentsButton = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' View Appointments')]")));
