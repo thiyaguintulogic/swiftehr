@@ -5,8 +5,8 @@
     <classes>
       <class name="testcases.Billing">
         <methods>
-          <include name="Scan_Bill"/>
           <include name="setUp"/>
+          <include name="Scan_Bill"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.Billing -->

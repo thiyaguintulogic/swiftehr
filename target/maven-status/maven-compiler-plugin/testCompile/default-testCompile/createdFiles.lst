@@ -1,3 +1,4 @@
 base\BaseTest.class
 testcases\SmokeTest.class
+testcases\Billing.class
 utilities\ReadPropertyFile.class

@@ -39,7 +39,8 @@ public class Billing extends BaseTest {
 
 	}
 
-	@Test(priority=0)
+	@Test(priority=0)	
+	
 	public static void OPBill() throws AWTException, InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -155,7 +156,7 @@ public class Billing extends BaseTest {
 		System.out.println("After paying the OP Bill - Bill Status  : " + AfterPaidStatus);
 	}
 
-	@Test(priority=1)
+	@Test(priority=1)	
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -200,7 +201,7 @@ public class Billing extends BaseTest {
 		WebElement labElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Lab')]")));
 		labElement.click();
 		
-		WebElement addNewElement1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])[2]")));
+		WebElement addNewElement1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 		addNewElement1.click();
 		
 		WebElement selectDropdown1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
@@ -209,7 +210,7 @@ public class Billing extends BaseTest {
 		WebElement altBloodTest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'01 lab test ')]")));
 		altBloodTest.click();
 		
-		WebElement addNewElement2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])[2]")));
+		WebElement addNewElement2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 		addNewElement2.click();
 		
 		WebElement selectDropdown2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
@@ -218,7 +219,7 @@ public class Billing extends BaseTest {
 		WebElement bilirubinPack = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Allergy Skin Test ')]")));
 		bilirubinPack.click();
 		
-		WebElement addNewElement3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])[2]")));
+		WebElement addNewElement3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 		addNewElement3.click();
 		
 		WebElement selectDropdown3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
@@ -302,7 +303,7 @@ public class Billing extends BaseTest {
 	}
 	
 	
-	@Test(priority = 2)
+	@Test(priority=2)	
 	public static void Scan_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -341,7 +342,7 @@ public class Billing extends BaseTest {
 	WebElement labElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Scan')]")));
 	labElement.click();
 	
-	WebElement addNewElement1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])[3]")));
+	WebElement addNewElement1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 	addNewElement1.click();
 	
 	WebElement typescan = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@role='combobox']")));
@@ -351,7 +352,7 @@ public class Billing extends BaseTest {
 	WebElement CTScan = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),' CT Scan ')]")));
 	CTScan.click();
 	
-	WebElement addNewElement2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])[3]")));
+	WebElement addNewElement2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 	addNewElement2.click();
 	
 	WebElement typescan1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@role='combobox']")));
@@ -361,7 +362,7 @@ public class Billing extends BaseTest {
 	WebElement MRIScan = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),' MRI SCAN ')]")));
 	MRIScan.click();
 	
-	WebElement addNewElement3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])[3]")));
+	WebElement addNewElement3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 	addNewElement3.click();
 	
 	WebElement typescan2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@role='combobox']")));
@@ -371,7 +372,7 @@ public class Billing extends BaseTest {
 	WebElement Xray = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),' x-Ray ')]")));
 	Xray.click();
 	
-	WebElement saveAndCloseButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[contains(text(),' Save & Close ')])[3]")));
+	WebElement saveAndCloseButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[contains(text(),' Save & Close ')])")));
 	saveAndCloseButton.click();
 	Thread.sleep(2000);
 	

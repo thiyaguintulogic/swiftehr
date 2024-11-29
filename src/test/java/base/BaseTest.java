@@ -17,9 +17,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 
 	
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	public static Properties prop = new Properties();
 	public static FileReader fr;
+		
 	
 	
 	@BeforeTest
@@ -36,8 +37,9 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			//WebDriverManager.chromedriver().browserVersion("124.0.6367.208").setup();
 	        ChromeOptions options = new ChromeOptions();
-	        options.addArguments("--disable-cache"); // Add this line to disable cache
-	        options.addArguments("--headless");
+	        //options.addArguments("--disable-cache"); // Add this line to disable cache
+	        options.addArguments("--incognito");
+	      // options.addArguments("--headless");
 	        driver = new ChromeDriver(options);
 			 driver.manage().window().maximize();
 			driver.get(prop.getProperty("UAT"));

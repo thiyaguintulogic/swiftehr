@@ -1,5 +1,0 @@
-# Created at 2024-06-22T10:22:32.409
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Test\Swift_EHR\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-
