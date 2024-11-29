@@ -2,44 +2,44 @@
 <testng-results ignored="4" total="10" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-21T15:00:31 IST" name="Suite" finished-at="2024-10-21T15:02:24 IST" duration-ms="112337">
+  <suite started-at="2024-11-29T16:40:49 IST" name="Suite" finished-at="2024-11-29T16:42:51 IST" duration-ms="121819">
     <groups>
     </groups>
-    <test started-at="2024-10-21T15:00:31 IST" name="Test" finished-at="2024-10-21T15:02:24 IST" duration-ms="112337">
+    <test started-at="2024-11-29T16:40:49 IST" name="Test" finished-at="2024-11-29T16:42:51 IST" duration-ms="121819">
       <class name="base.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-10-21T15:00:31 IST" name="setUp" finished-at="2024-10-21T15:00:39 IST" duration-ms="7257" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-11-29T16:40:49 IST" name="setUp" finished-at="2024-11-29T16:41:02 IST" duration-ms="12843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-10-21T15:02:24 IST" name="tearDown" finished-at="2024-10-21T15:02:24 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-11-29T16:42:51 IST" name="tearDown" finished-at="2024-11-29T16:42:51 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- base.BaseTest -->
       <class name="testcases.Billing">
-        <test-method signature="OPBill()[pri:0, instance:testcases.Billing@4e5ed836]" started-at="2024-10-21T15:01:03 IST" name="OPBill" finished-at="2024-10-21T15:01:25 IST" duration-ms="21569" status="PASS">
+        <test-method signature="OPBill()[pri:0, instance:testcases.Billing@4e5ed836]" started-at="2024-11-29T16:41:28 IST" name="OPBill" finished-at="2024-11-29T16:41:50 IST" duration-ms="22480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OPBill -->
-        <test-method signature="Lab_Bill()[pri:1, instance:testcases.Billing@4e5ed836]" started-at="2024-10-21T15:01:25 IST" name="Lab_Bill" finished-at="2024-10-21T15:01:54 IST" duration-ms="28831" status="PASS">
+        <test-method signature="Lab_Bill()[pri:1, instance:testcases.Billing@4e5ed836]" started-at="2024-11-29T16:41:50 IST" name="Lab_Bill" finished-at="2024-11-29T16:42:20 IST" duration-ms="30140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lab_Bill -->
-        <test-method signature="Scan_Bill()[pri:2, instance:testcases.Billing@4e5ed836]" started-at="2024-10-21T15:01:54 IST" name="Scan_Bill" finished-at="2024-10-21T15:02:24 IST" duration-ms="29960" status="PASS">
+        <test-method signature="Scan_Bill()[pri:2, instance:testcases.Billing@4e5ed836]" started-at="2024-11-29T16:42:20 IST" name="Scan_Bill" finished-at="2024-11-29T16:42:51 IST" duration-ms="30994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Scan_Bill -->
       </class> <!-- testcases.Billing -->
       <class name="testcases.SmokeTest">
-        <test-method signature="Logintest()[pri:0, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-10-21T15:00:39 IST" name="Logintest" finished-at="2024-10-21T15:00:52 IST" duration-ms="13515" status="PASS">
+        <test-method signature="Logintest()[pri:0, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-29T16:41:02 IST" name="Logintest" finished-at="2024-11-29T16:41:16 IST" duration-ms="13467" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logintest -->
-        <test-method signature="PatientRegistration()[pri:1, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-10-21T15:00:52 IST" name="PatientRegistration" finished-at="2024-10-21T15:01:00 IST" duration-ms="8302" status="PASS">
+        <test-method signature="PatientRegistration()[pri:1, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-29T16:41:16 IST" name="PatientRegistration" finished-at="2024-11-29T16:41:24 IST" duration-ms="8532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PatientRegistration -->
-        <test-method signature="Create_Appointment()[pri:2, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-10-21T15:01:00 IST" name="Create_Appointment" finished-at="2024-10-21T15:01:03 IST" duration-ms="2834" status="PASS">
+        <test-method signature="Create_Appointment()[pri:2, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-29T16:41:24 IST" name="Create_Appointment" finished-at="2024-11-29T16:41:28 IST" duration-ms="3261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Create_Appointment -->

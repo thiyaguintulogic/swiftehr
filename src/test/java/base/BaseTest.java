@@ -35,11 +35,11 @@ public class BaseTest {
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 				
 			WebDriverManager.chromedriver().setup();
-			//WebDriverManager.chromedriver().browserVersion("124.0.6367.208").setup();
+			// WebDriverManager.chromedriver().browserVersion("131.0.6778.86").setup();
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--disable-cache"); // Add this line to disable cache
-	        //options.addArguments("--incognito");
-	       options.addArguments("--headless");
+	        // options.addArguments("--incognito");
+	       // options.addArguments("--headless");
 	        driver = new ChromeDriver(options);
 			 driver.manage().window().maximize();
 			driver.get(prop.getProperty("UAT"));
