@@ -44,7 +44,7 @@ public class SmokeTest extends BaseTest {
 
 		// Click on 'Patient Registration'
 		WebElement patientRegistration = wait.until(
-				ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' Patient Registration')]")));
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),' Patient Registration')]")));
 		patientRegistration.click();
 
 		// Fill out the registration form for the first patient
