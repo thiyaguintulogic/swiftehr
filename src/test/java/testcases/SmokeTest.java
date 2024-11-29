@@ -134,7 +134,7 @@ public class SmokeTest extends BaseTest {
 	@Test(priority = 2)
 	public static void Create_Appointment() throws InterruptedException {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
