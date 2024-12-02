@@ -9,13 +9,43 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">121,819</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">125,575</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testcases.Billing</td><td><a href="#m0">Lab_Bill</a></td><td rowspan="1">1732878710546</td><td rowspan="1">30140</td></tr><tr class="passedeven"><td><a href="#m1">OPBill</a></td><td rowspan="1">1732878688061</td><td rowspan="1">22480</td></tr><tr class="passedeven"><td><a href="#m2">Scan_Bill</a></td><td rowspan="1">1732878740689</td><td rowspan="1">30994</td></tr><tr class="passedodd"><td rowspan="3">testcases.SmokeTest</td><td><a href="#m3">Create_Appointment</a></td><td rowspan="1">1732878684794</td><td rowspan="1">3261</td></tr><tr class="passedodd"><td><a href="#m4">Logintest</a></td><td rowspan="1">1732878662784</td><td rowspan="1">13467</td></tr><tr class="passedodd"><td><a href="#m5">PatientRegistration</a></td><td rowspan="1">1732878676258</td><td rowspan="1">8532</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testcases.Billing</td><td><a href="#m0">Lab_Bill</a></td><td rowspan="1">1732959848110</td><td rowspan="1">12368</td></tr><tr class="failedeven"><td><a href="#m1">Scan_Bill</a></td><td rowspan="1">1732959860489</td><td rowspan="1">35280</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testcases.Billing</td><td><a href="#m2">OPBill</a></td><td rowspan="1">1732959822207</td><td rowspan="1">25898</td></tr><tr class="passedodd"><td rowspan="3">testcases.SmokeTest</td><td><a href="#m3">Create_Appointment</a></td><td rowspan="1">1732959817926</td><td rowspan="1">4278</td></tr><tr class="passedodd"><td><a href="#m4">Logintest</a></td><td rowspan="1">1732959795493</td><td rowspan="1">13951</td></tr><tr class="passedodd"><td><a href="#m5">PatientRegistration</a></td><td rowspan="1">1732959809450</td><td rowspan="1">8474</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testcases.Billing#Lab_Bill</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testcases.Billing#OPBill</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testcases.Billing#Scan_Bill</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testcases.Billing#Lab_Bill</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span _ngcontent-kvn-c180=&quot;&quot;&gt;...&lt;/span&gt; is not clickable at point (415, 308). Other element would receive the click: &lt;div _ngcontent-kvn-c61=&quot;&quot; class=&quot;page-loader-wrapper ng-star-inserted&quot; style=&quot;background: #ffffffa6!important;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d1f8c2f9b317940c2c6b5ebf1dbbdb9, clickElement {id=f.5B7F86870B3004B08A84727B446B0C5D.d.6038E5539CDF867CCA3578A364897725.e.689}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5d1f8c2f9b317940c2c6b5ebf1dbbdb9)] -&gt; xpath: (//span[contains(text(),&apos;Add New&apos;)])]
+Session ID: 5d1f8c2f9b317940c2c6b5ebf1dbbdb9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at testcases.Billing.Lab_Bill(Billing.java:205)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testcases.Billing#Scan_Bill</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos; View Appointments&apos;)] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d1f8c2f9b317940c2c6b5ebf1dbbdb9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.Billing.Scan_Bill(Billing.java:317)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testcases.Billing#OPBill</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">testcases.SmokeTest#Create_Appointment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m4">testcases.SmokeTest#Logintest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">testcases.SmokeTest#PatientRegistration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

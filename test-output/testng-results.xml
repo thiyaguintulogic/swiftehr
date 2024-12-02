@@ -1,45 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="10" passed="6" failed="0" skipped="0">
+<testng-results ignored="4" total="10" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-29T16:40:49 IST" name="Suite" finished-at="2024-11-29T16:42:51 IST" duration-ms="121819">
+  <suite started-at="2024-11-30T15:12:50 IST" name="Suite" finished-at="2024-11-30T15:14:55 IST" duration-ms="125575">
     <groups>
     </groups>
-    <test started-at="2024-11-29T16:40:49 IST" name="Test" finished-at="2024-11-29T16:42:51 IST" duration-ms="121819">
+    <test started-at="2024-11-30T15:12:50 IST" name="Test" finished-at="2024-11-30T15:14:55 IST" duration-ms="125575">
       <class name="base.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-11-29T16:40:49 IST" name="setUp" finished-at="2024-11-29T16:41:02 IST" duration-ms="12843" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-11-30T15:12:50 IST" name="setUp" finished-at="2024-11-30T15:13:15 IST" duration-ms="25216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-11-29T16:42:51 IST" name="tearDown" finished-at="2024-11-29T16:42:51 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-11-30T15:14:55 IST" name="tearDown" finished-at="2024-11-30T15:14:55 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- base.BaseTest -->
       <class name="testcases.Billing">
-        <test-method signature="OPBill()[pri:0, instance:testcases.Billing@4e5ed836]" started-at="2024-11-29T16:41:28 IST" name="OPBill" finished-at="2024-11-29T16:41:50 IST" duration-ms="22480" status="PASS">
+        <test-method signature="OPBill()[pri:0, instance:testcases.Billing@4e5ed836]" started-at="2024-11-30T15:13:42 IST" name="OPBill" finished-at="2024-11-30T15:14:08 IST" duration-ms="25898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OPBill -->
-        <test-method signature="Lab_Bill()[pri:1, instance:testcases.Billing@4e5ed836]" started-at="2024-11-29T16:41:50 IST" name="Lab_Bill" finished-at="2024-11-29T16:42:20 IST" duration-ms="30140" status="PASS">
+        <test-method signature="Lab_Bill()[pri:1, instance:testcases.Billing@4e5ed836]" started-at="2024-11-30T15:14:08 IST" name="Lab_Bill" finished-at="2024-11-30T15:14:20 IST" duration-ms="12368" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span _ngcontent-kvn-c180="">...</span> is not clickable at point (415, 308). Other element would receive the click: <div _ngcontent-kvn-c61="" class="page-loader-wrapper ng-star-inserted" style="background: #ffffffa6!important;">...</div>
+  (Session info: chrome=131.0.6778.86)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d1f8c2f9b317940c2c6b5ebf1dbbdb9, clickElement {id=f.5B7F86870B3004B08A84727B446B0C5D.d.6038E5539CDF867CCA3578A364897725.e.689}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5d1f8c2f9b317940c2c6b5ebf1dbbdb9)] -> xpath: (//span[contains(text(),'Add New')])]
+Session ID: 5d1f8c2f9b317940c2c6b5ebf1dbbdb9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span _ngcontent-kvn-c180="">...</span> is not clickable at point (415, 308). Other element would receive the click: <div _ngcontent-kvn-c61="" class="page-loader-wrapper ng-star-inserted" style="background: #ffffffa6!important;">...</div>
+  (Session info: chrome=131.0.6778.86)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d1f8c2f9b317940c2c6b5ebf1dbbdb9, clickElement {id=f.5B7F86870B3004B08A84727B446B0C5D.d.6038E5539CDF867CCA3578A364897725.e.689}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5d1f8c2f9b317940c2c6b5ebf1dbbdb9)] -> xpath: (//span[contains(text(),'Add New')])]
+Session ID: 5d1f8c2f9b317940c2c6b5ebf1dbbdb9
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at testcases.Billing.Lab_Bill(Billing.java:205)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Lab_Bill -->
-        <test-method signature="Scan_Bill()[pri:2, instance:testcases.Billing@4e5ed836]" started-at="2024-11-29T16:42:20 IST" name="Scan_Bill" finished-at="2024-11-29T16:42:51 IST" duration-ms="30994" status="PASS">
+        <test-method signature="Scan_Bill()[pri:2, instance:testcases.Billing@4e5ed836]" started-at="2024-11-30T15:14:20 IST" name="Scan_Bill" finished-at="2024-11-30T15:14:55 IST" duration-ms="35280" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),' View Appointments')] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d1f8c2f9b317940c2c6b5ebf1dbbdb9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),' View Appointments')] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60218}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60218/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d1f8c2f9b317940c2c6b5ebf1dbbdb9
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at testcases.Billing.Scan_Bill(Billing.java:317)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Scan_Bill -->
       </class> <!-- testcases.Billing -->
       <class name="testcases.SmokeTest">
-        <test-method signature="Logintest()[pri:0, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-29T16:41:02 IST" name="Logintest" finished-at="2024-11-29T16:41:16 IST" duration-ms="13467" status="PASS">
+        <test-method signature="Logintest()[pri:0, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-30T15:13:15 IST" name="Logintest" finished-at="2024-11-30T15:13:29 IST" duration-ms="13951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logintest -->
-        <test-method signature="PatientRegistration()[pri:1, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-29T16:41:16 IST" name="PatientRegistration" finished-at="2024-11-29T16:41:24 IST" duration-ms="8532" status="PASS">
+        <test-method signature="PatientRegistration()[pri:1, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-30T15:13:29 IST" name="PatientRegistration" finished-at="2024-11-30T15:13:37 IST" duration-ms="8474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PatientRegistration -->
-        <test-method signature="Create_Appointment()[pri:2, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-29T16:41:24 IST" name="Create_Appointment" finished-at="2024-11-29T16:41:28 IST" duration-ms="3261" status="PASS">
+        <test-method signature="Create_Appointment()[pri:2, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-11-30T15:13:37 IST" name="Create_Appointment" finished-at="2024-11-30T15:13:42 IST" duration-ms="4278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Create_Appointment -->

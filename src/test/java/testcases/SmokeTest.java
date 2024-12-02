@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Katherine");
+		firstName.sendKeys("Abinaya");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Roman");
+		Lastname.sendKeys("D");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("43");
+		age.sendKeys("21");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("2412354256");
+		phoneNumber.sendKeys("2542123569");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -92,18 +92,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the second patient
 		WebElement firstName2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName2.sendKeys("Anurag");
+		firstName2.sendKeys("Ratna");
 		
 		WebElement Lastname2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname2.sendKeys("H");
+		Lastname2.sendKeys("kumar");
 
 		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age2.sendKeys("37");
+		age2.sendKeys("52");
 
 		WebElement phoneNumber2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber2.sendKeys("4254256358");
+		phoneNumber2.sendKeys("3212452563");
 
 		WebElement genderMale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));

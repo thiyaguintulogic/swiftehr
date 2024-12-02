@@ -8,6 +8,7 @@
           <include name="setUp"/>
           <include name="Scan_Bill"/>
           <include name="tearDown"/>
+          <include name="Lab_Bill"/>
         </methods>
       </class> <!-- testcases.Billing -->
     </classes>

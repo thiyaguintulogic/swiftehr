@@ -39,7 +39,7 @@ public class Billing extends BaseTest {
 
 	}
 
-	@Test(priority=0)	
+	@Test(priority = 0)
 	
 	public static void OPBill() throws AWTException, InterruptedException {
 
