@@ -183,13 +183,14 @@ public class SmokeTest extends BaseTest {
 	}
 
 	
-	public static void Appoinment_Already_Created() {
+	public static void Appoinment_Already_Created() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", menuIcon);
+		Thread.sleep(3000);
 
 		WebElement patientSearch = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' Patient Search')]")));
