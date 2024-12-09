@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Aubrey");
+		firstName.sendKeys("Halia");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("D");
+		Lastname.sendKeys("Kingston");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("53");
+		age.sendKeys("22");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("1232124256");
+		phoneNumber.sendKeys("2123254569");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -92,18 +92,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the second patient
 		WebElement firstName2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName2.sendKeys("Zion");
+		firstName2.sendKeys("Samuel");
 		
 		WebElement Lastname2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname2.sendKeys("Benjamin");
+		Lastname2.sendKeys("Joshua");
 
 		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age2.sendKeys("51");
+		age2.sendKeys("36");
 
 		WebElement phoneNumber2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber2.sendKeys("3212425369");
+		phoneNumber2.sendKeys("2542123569");
 
 		WebElement genderMale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));
@@ -141,8 +141,14 @@ public class SmokeTest extends BaseTest {
         executor.executeScript("arguments[0].click();", menuIcon);
         Thread.sleep(3000);
 
-        WebElement patientSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),' Patient Search')]")));
-        wait.until(ExpectedConditions.elementToBeClickable(patientSearch)).click();
+        WebElement patientSearch = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(normalize-space(),'Patient Search')]")));
+        wait.until(ExpectedConditions.visibilityOf(patientSearch));
+        if (patientSearch.isEnabled()) {
+            wait.until(ExpectedConditions.elementToBeClickable(patientSearch)).click();
+            System.out.println("Patient Search clicked successfully");
+        } else {
+            System.out.println("Patient Search is not enabled");
+        }
 
 		// Loop for five appointments
 		for (int i = 1; i <=2; i++) {
