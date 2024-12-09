@@ -141,9 +141,8 @@ public class SmokeTest extends BaseTest {
         executor.executeScript("arguments[0].click();", menuIcon);
         Thread.sleep(3000);
 
-		WebElement patientSearch = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),' Patient Search')]")));
-		patientSearch.click();
+        WebElement patientSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),' Patient Search')]")));
+        wait.until(ExpectedConditions.elementToBeClickable(patientSearch)).click();
 
 		// Loop for five appointments
 		for (int i = 1; i <=2; i++) {
