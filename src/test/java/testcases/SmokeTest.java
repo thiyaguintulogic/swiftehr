@@ -139,6 +139,7 @@ public class SmokeTest extends BaseTest {
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", menuIcon);
+        Thread.sleep(3000);
 
 		WebElement patientSearch = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),' Patient Search')]")));
