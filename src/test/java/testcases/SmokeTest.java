@@ -37,7 +37,7 @@ public class SmokeTest extends BaseTest {
 
 	}
 
-	
+	@Test(priority = 1)
 	public static void PatientRegistration() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Sophia");
+		firstName.sendKeys("Zoey");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Luna");
+		Lastname.sendKeys("Micah");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("26");
+		age.sendKeys("42");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("1242354569");
+		phoneNumber.sendKeys("2123214256");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -92,18 +92,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the second patient
 		WebElement firstName2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName2.sendKeys("Benjamin");
+		firstName2.sendKeys("Jordan");
 		
 		WebElement Lastname2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname2.sendKeys("Santiago");
+		Lastname2.sendKeys("Austin");
 
 		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age2.sendKeys("34");
+		age2.sendKeys("39");
 
 		WebElement phoneNumber2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber2.sendKeys("2312452563");
+		phoneNumber2.sendKeys("1242545896");
 
 		WebElement genderMale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));
@@ -131,14 +131,14 @@ public class SmokeTest extends BaseTest {
 	}
 
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public static void Create_Appointment() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
-//		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
-//        JavascriptExecutor executor = (JavascriptExecutor) driver;
-//        executor.executeScript("arguments[0].click();", menuIcon);
+		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", menuIcon);
 
 		WebElement patientSearch = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),' Patient Search')]")));

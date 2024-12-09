@@ -40,7 +40,6 @@ public class Billing extends BaseTest {
 	}
 
 	@Test(priority = 0)
-	
 	public static void OPBill() throws AWTException, InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -145,18 +144,23 @@ public class Billing extends BaseTest {
 		WebElement PatientCode = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[1]")));
 		String AfterPaidPatientCode = PatientCode.getText();
 
-		WebElement Billnumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[6]")));
+		WebElement Billnumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[5]")));
 		String AfterPaidBillnumber = Billnumber.getText();
+		
+		WebElement BillDate = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[6]")));
+		String AfterPaidBillDate = BillDate.getText();
 
 		WebElement AfterStatus = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[8]")));
 		String AfterPaidStatus = AfterStatus.getText();
 
 		System.out.println("After paying the OP Bill - Patient Code : " + AfterPaidPatientCode);
 		System.out.println("After paying the OP Bill - Bill Number  : " + AfterPaidBillnumber);
+		System.out.println("After paying the OP Bill - Bill Number  : " + AfterPaidBillDate);
 		System.out.println("After paying the OP Bill - Bill Status  : " + AfterPaidStatus);
 	}
 
-	@Test(priority=1)	
+		
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -291,19 +295,24 @@ public class Billing extends BaseTest {
 		WebElement PatientCode = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[1]")));
 		String AfterPaidPatientCode = PatientCode.getText();
 
-		WebElement Billnumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[6]")));
+		WebElement Billnumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[5]")));
 		String AfterPaidBillnumber = Billnumber.getText();
+		
+		WebElement BillDate = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[6]")));
+		String AfterPaidBillDate = BillDate.getText();
 
 		WebElement AfterStatus = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[8]")));
 		String AfterPaidStatus = AfterStatus.getText();
 
 		System.out.println("After paying the Lab Bill - Patient Code : " + AfterPaidPatientCode);
 		System.out.println("After paying the Lab Bill - Bill Number  : " + AfterPaidBillnumber);
+		System.out.println("After paying the Lab Bill - Bill Number  : " + AfterPaidBillDate);
 		System.out.println("After paying the Lab Bill - Bill Status  : " + AfterPaidStatus);
 	}
 	
 	
-	@Test(priority=2)	
+		
 	public static void Scan_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -339,8 +348,8 @@ public class Billing extends BaseTest {
 	WebElement firstElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//tbody/tr[1]/td[8]/div[1]/a[1]/span[1]")));
 	firstElement.click();
 	
-	WebElement labElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Scan')]")));
-	labElement.click();
+	WebElement ScanElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Scan')]")));
+	ScanElement.click();
 	
 	WebElement addNewElement1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 	addNewElement1.click();
@@ -437,12 +446,17 @@ public class Billing extends BaseTest {
 
 	WebElement Billnumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[6]")));
 	String AfterPaidBillnumber = Billnumber.getText();
+	
+	WebElement BillDate = wait
+			.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[5]")));
+	String AfterPaidBillDate = BillDate.getText();
 
 	WebElement AfterStatus = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td)[8]")));
 	String AfterPaidStatus = AfterStatus.getText();
 
 	System.out.println("After paying the Scan Bill - Patient Code : " + AfterPaidPatientCode);
 	System.out.println("After paying the Scan Bill - Bill Number  : " + AfterPaidBillnumber);
+	System.out.println("After paying the Scan Bill - Bill Number  : " + AfterPaidBillDate);
 	System.out.println("After paying the Scan Bill - Bill Status  : " + AfterPaidStatus);
 		
 	}
