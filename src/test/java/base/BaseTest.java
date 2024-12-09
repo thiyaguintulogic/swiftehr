@@ -39,9 +39,10 @@ public class BaseTest {
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--disable-cache"); // Add this line to disable cache
 	        // options.addArguments("--incognito");
-	        options.addArguments("--headless");
+	        //options.addArguments("--headless");
+	        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
 	        driver = new ChromeDriver(options);
-			 driver.manage().window().maximize();
+			 //driver.manage().window().maximize();
 			driver.get(prop.getProperty("UAT"));
 		}
 		else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {

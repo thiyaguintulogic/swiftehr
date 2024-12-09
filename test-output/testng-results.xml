@@ -2,36 +2,36 @@
 <testng-results ignored="4" total="8" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-09T12:04:29 IST" name="Suite" finished-at="2024-12-09T12:05:25 IST" duration-ms="56272">
+  <suite started-at="2024-12-09T15:41:48 IST" name="Suite" finished-at="2024-12-09T15:42:49 IST" duration-ms="60718">
     <groups>
     </groups>
-    <test started-at="2024-12-09T12:04:29 IST" name="Test" finished-at="2024-12-09T12:05:25 IST" duration-ms="56272">
+    <test started-at="2024-12-09T15:41:48 IST" name="Test" finished-at="2024-12-09T15:42:49 IST" duration-ms="60718">
       <class name="base.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-12-09T12:04:29 IST" name="setUp" finished-at="2024-12-09T12:04:31 IST" duration-ms="2760" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-12-09T15:41:48 IST" name="setUp" finished-at="2024-12-09T15:41:59 IST" duration-ms="10371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-12-09T12:05:25 IST" name="tearDown" finished-at="2024-12-09T12:05:25 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@4c163e3]" started-at="2024-12-09T15:42:49 IST" name="tearDown" finished-at="2024-12-09T15:42:49 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- base.BaseTest -->
       <class name="testcases.Billing">
-        <test-method signature="OPBill()[pri:0, instance:testcases.Billing@4e5ed836]" started-at="2024-12-09T12:05:01 IST" name="OPBill" finished-at="2024-12-09T12:05:25 IST" duration-ms="23924" status="PASS">
+        <test-method signature="OPBill()[pri:0, instance:testcases.Billing@4e5ed836]" started-at="2024-12-09T15:42:27 IST" name="OPBill" finished-at="2024-12-09T15:42:49 IST" duration-ms="22497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OPBill -->
       </class> <!-- testcases.Billing -->
       <class name="testcases.SmokeTest">
-        <test-method signature="Logintest()[pri:0, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-12-09T12:04:31 IST" name="Logintest" finished-at="2024-12-09T12:04:48 IST" duration-ms="16983" status="PASS">
+        <test-method signature="Logintest()[pri:0, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-12-09T15:41:59 IST" name="Logintest" finished-at="2024-12-09T15:42:12 IST" duration-ms="13499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logintest -->
-        <test-method signature="PatientRegistration()[pri:1, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-12-09T12:04:48 IST" name="PatientRegistration" finished-at="2024-12-09T12:04:57 IST" duration-ms="8224" status="PASS">
+        <test-method signature="PatientRegistration()[pri:1, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-12-09T15:42:12 IST" name="PatientRegistration" finished-at="2024-12-09T15:42:21 IST" duration-ms="8131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PatientRegistration -->
-        <test-method signature="Create_Appointment()[pri:2, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-12-09T12:04:57 IST" name="Create_Appointment" finished-at="2024-12-09T12:05:01 IST" duration-ms="4305" status="PASS">
+        <test-method signature="Create_Appointment()[pri:2, instance:testcases.SmokeTest@2ab4bc72]" started-at="2024-12-09T15:42:21 IST" name="Create_Appointment" finished-at="2024-12-09T15:42:27 IST" duration-ms="6132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Create_Appointment -->
