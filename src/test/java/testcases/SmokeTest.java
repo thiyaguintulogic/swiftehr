@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Hannah");
+		firstName.sendKeys("Alaia");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Caleb");
+		Lastname.sendKeys("Serenity");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("45");
+		age.sendKeys("57");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("4215245789");
+		phoneNumber.sendKeys("3212412536");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -77,7 +77,7 @@ public class SmokeTest extends BaseTest {
 		cityField.click();
 
 		WebElement cityChennai = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Coimbatore')]")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Trichy')]")));
 		cityChennai.click();
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -92,18 +92,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the second patient
 		WebElement firstName2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName2.sendKeys("Elias");
+		firstName2.sendKeys("Owen");
 		
 		WebElement Lastname2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname2.sendKeys("Jeremiah");
+		Lastname2.sendKeys("Enzo");
 
 		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age2.sendKeys("41");
+		age2.sendKeys("39");
 
 		WebElement phoneNumber2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber2.sendKeys("3212324569");
+		phoneNumber2.sendKeys("3212425369");
 
 		WebElement genderMale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));
@@ -119,7 +119,7 @@ public class SmokeTest extends BaseTest {
 		cityField2.click();
 
 		WebElement cityAruppukkottai = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Salem')]")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Erode')]")));
 		cityAruppukkottai.click();
 
 		js.executeScript("window.scrollBy(0, 500);");
