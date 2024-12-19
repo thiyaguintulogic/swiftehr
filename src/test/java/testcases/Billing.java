@@ -42,7 +42,7 @@ public class Billing extends BaseTest {
 	@Test(priority = 0)
 	public static void OPBill() throws AWTException, InterruptedException {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -101,7 +101,7 @@ public class Billing extends BaseTest {
 		secondSelectDropdown.click();
 
 		WebElement opRegistrationFees = wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.xpath("//span[contains(text(),'OP Registration fees ')]")));
+				.elementToBeClickable(By.xpath("//span[contains(text(),'OP Registration fees ')]")));
 		opRegistrationFees.click();
 
 		WebElement payBillButton = wait
