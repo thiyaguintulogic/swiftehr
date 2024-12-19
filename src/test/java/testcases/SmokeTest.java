@@ -141,7 +141,7 @@ public class SmokeTest extends BaseTest {
         executor.executeScript("arguments[0].click();", menuIcon);
         Thread.sleep(3000);
 
-        WebElement patientSearch = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(normalize-space(),'Patient Search')]")));
+        WebElement patientSearch = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),'Patient Search')]")));
         wait.until(ExpectedConditions.visibilityOf(patientSearch));
         if (patientSearch.isEnabled()) {
             wait.until(ExpectedConditions.elementToBeClickable(patientSearch)).click();
