@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Alaia");
+		firstName.sendKeys("Paisley");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Serenity");
+		Lastname.sendKeys("Aubrey");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("57");
+		age.sendKeys("43");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("3212412536");
+		phoneNumber.sendKeys("2123254256");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -92,18 +92,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the second patient
 		WebElement firstName2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName2.sendKeys("Owen");
+		firstName2.sendKeys("Ezekiel");
 		
 		WebElement Lastname2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname2.sendKeys("Enzo");
+		Lastname2.sendKeys("Miles");
 
 		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age2.sendKeys("39");
+		age2.sendKeys("26");
 
 		WebElement phoneNumber2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber2.sendKeys("3212425369");
+		phoneNumber2.sendKeys("2512425636");
 
 		WebElement genderMale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));

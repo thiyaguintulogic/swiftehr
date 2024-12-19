@@ -99,9 +99,10 @@ public class Billing extends BaseTest {
 		WebElement secondSelectDropdown = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
 		secondSelectDropdown.click();
+		Thread.sleep(3000);
 
 		WebElement opRegistrationFees = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//span[contains(text(),'OP Registration fees ')]")));
+				.elementToBeClickable(By.xpath("//span[contains(text(),'Consultation fees ')]")));
 		opRegistrationFees.click();
 
 		WebElement payBillButton = wait
