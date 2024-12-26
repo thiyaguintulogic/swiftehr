@@ -35,7 +35,7 @@ public class BaseTest {
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 				
 			//WebDriverManager.chromedriver().setup();
-			 WebDriverManager.chromedriver().browserVersion("131.0.6778.86").setup();
+			 WebDriverManager.chromedriver().browserVersion("131.0.6778.141").setup();
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--disable-cache"); // Add this line to disable cache
 	        // options.addArguments("--incognito");

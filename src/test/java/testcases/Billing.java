@@ -162,6 +162,7 @@ public class Billing extends BaseTest {
 	}
 
 		
+	@Test(priority = 1)
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
