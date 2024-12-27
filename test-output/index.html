@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.SmokeTest" class="method navigator-link" hash-for-method="Create_Appointment">Create_Appointment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Billing" class="method navigator-link" hash-for-method="Lab_Bill">Lab_Bill</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,6 +144,13 @@
               <span class="class-name">testcases.Billing</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Lab_Bill">
+                  </a> <!-- Lab_Bill -->
+                  <span class="method-name">Lab_Bill</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="OPBill">
@@ -231,23 +243,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Logintest')
-data.setCell(0, 2, 'testcases.SmokeTest')
-data.setCell(0, 3, 64409);
+data.setCell(0, 1, 'Lab_Bill')
+data.setCell(0, 2, 'testcases.Billing')
+data.setCell(0, 3, 31761);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'OPBill')
 data.setCell(1, 2, 'testcases.Billing')
-data.setCell(1, 3, 25446);
+data.setCell(1, 3, 26380);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'PatientRegistration')
+data.setCell(2, 1, 'Logintest')
 data.setCell(2, 2, 'testcases.SmokeTest')
-data.setCell(2, 3, 8252);
+data.setCell(2, 3, 16274);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Create_Appointment')
+data.setCell(3, 1, 'PatientRegistration')
 data.setCell(3, 2, 'testcases.SmokeTest')
-data.setCell(3, 3, 6355);
+data.setCell(3, 3, 9990);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Create_Appointment')
+data.setCell(4, 2, 'testcases.SmokeTest')
+data.setCell(4, 3, 7737);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -306,29 +322,33 @@ return data;
               <div class="chronological-class-name">testcases.SmokeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Logintest</span>
-                <span class="method-start">59141 ms</span>
+                <span class="method-start">21615 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PatientRegistration</span>
-                <span class="method-start">123561 ms</span>
+                <span class="method-start">37895 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Create_Appointment</span>
-                <span class="method-start">131817 ms</span>
+                <span class="method-start">47896 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Billing</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">OPBill</span>
-                <span class="method-start">138174 ms</span>
+                <span class="method-start">55637 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Lab_Bill</span>
+                <span class="method-start">82025 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">base.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">163622 ms</span>
+                <span class="method-start">113789 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
