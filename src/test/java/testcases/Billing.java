@@ -50,8 +50,8 @@ public class Billing extends BaseTest {
 		Thread.sleep(5000);
 		
 		WebElement viewAppointmentsButton = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' View Appointments')]")));
-		viewAppointmentsButton.click();
+			    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
+			wait.until(ExpectedConditions.elementToBeClickable(viewAppointmentsButton)).click();
 
 		WebElement checkInButton = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@title='Check In'])[1]")));
@@ -173,8 +173,8 @@ public class Billing extends BaseTest {
 		Thread.sleep(5000);
 
 		WebElement viewAppointmentsButton = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' View Appointments')]")));
-		viewAppointmentsButton.click();
+			    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
+			wait.until(ExpectedConditions.elementToBeClickable(viewAppointmentsButton)).click();
 
 //		WebElement checkInButton = wait
 //				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@title='Check In'])[1]")));
@@ -325,8 +325,8 @@ public class Billing extends BaseTest {
 		Thread.sleep(5000);
 
 		WebElement viewAppointmentsButton = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' View Appointments')]")));
-		viewAppointmentsButton.click();
+			    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
+			wait.until(ExpectedConditions.elementToBeClickable(viewAppointmentsButton)).click();
 		
 		WebElement firstRowFirstColumn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table/tbody/tr[1]/td[1]/span")));
 		String valueOfFirstRowFirstColumn = firstRowFirstColumn.getText().trim();
