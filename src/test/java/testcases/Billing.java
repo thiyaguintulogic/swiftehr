@@ -69,7 +69,8 @@ public class Billing extends BaseTest {
 		opButton.click();
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//button[@title='Search']")).click();
+		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+		searchButton.click();
 		
 		WebElement SearchStatus = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 		SearchStatus.sendKeys(valueOfFirstRowFirstColumn);
@@ -133,7 +134,8 @@ public class Billing extends BaseTest {
 		driver.findElement(By.xpath("(//a[text()=' OP'])")).click();
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[@title='Search']")).click();
+		WebElement searchButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+		searchButton1.click();
 		
 		WebElement SearchStatus_OP = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 		SearchStatus_OP.sendKeys(valueOfFirstRowFirstColumn);
@@ -193,7 +195,8 @@ public class Billing extends BaseTest {
      		driver.findElement(By.xpath("//a[contains(text(),' Current Admissions')]")).click();
      		Thread.sleep(2000);
 
-     		driver.findElement(By.xpath("//button[@title='Search']")).click();
+     		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+     		searchButton.click();
      		
      		WebElement SearchStatus = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
      		SearchStatus.sendKeys(valueOfFirstRowFirstColumn);
@@ -246,8 +249,8 @@ public class Billing extends BaseTest {
 		labLink.click();
 		Thread.sleep(2000);
 		
-		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
-		searchButton.click();
+		WebElement searchButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+		searchButton1.click();
 		
 		WebElement SearchPatient = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 		SearchPatient.sendKeys(valueOfFirstRowFirstColumn);
@@ -285,7 +288,8 @@ public class Billing extends BaseTest {
 		driver.findElement(By.xpath("(//a[text()=' Lab'])[1]")).click();
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//button[@title='Search']")).click();
+		WebElement searchButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+		searchButton2.click();
 		
 		WebElement SearchStatus_OP = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 		SearchStatus_OP.sendKeys(valueOfFirstRowFirstColumn);
@@ -339,7 +343,8 @@ public class Billing extends BaseTest {
  		driver.findElement(By.xpath("//a[contains(text(),' Current Admissions')]")).click();
  		Thread.sleep(2000);
 
- 		driver.findElement(By.xpath("//button[@title='Search']")).click();
+ 		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+ 		searchButton.click();
  		
  		WebElement SearchStatus = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
  		SearchStatus.sendKeys(valueOfFirstRowFirstColumn);
@@ -395,8 +400,8 @@ public class Billing extends BaseTest {
 	labLink.click();
 	Thread.sleep(2000);
 	
-	WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
-	searchButton.click();
+	WebElement searchButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+	searchButton1.click();
 	
 	WebElement SearchPatient = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 	SearchPatient.sendKeys(valueOfFirstRowFirstColumn);
@@ -434,7 +439,8 @@ public class Billing extends BaseTest {
 	driver.findElement(By.xpath("(//a[text()=' Scan'])[1]")).click();
 	Thread.sleep(2000);
 
-	driver.findElement(By.xpath("//button[@title='Search']")).click();
+	WebElement searchButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+	searchButton2.click();
 	
 	WebElement SearchStatus_OP = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 	SearchStatus_OP.sendKeys(valueOfFirstRowFirstColumn);
