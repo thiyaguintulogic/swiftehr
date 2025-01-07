@@ -49,9 +49,8 @@ public class Billing extends BaseTest {
 		executor.executeScript("arguments[0].click();", menuIcon);
 		Thread.sleep(5000);
 		
-		WebElement viewAppointmentsButton = wait
-			    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
-			wait.until(ExpectedConditions.elementToBeClickable(viewAppointmentsButton)).click();
+		WebElement viewAppointmentsButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", viewAppointmentsButton);
 
 		WebElement checkInButton = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@title='Check In'])[1]")));

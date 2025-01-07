@@ -182,8 +182,8 @@ public class SmokeTest extends BaseTest {
 			Thread.sleep(4000);
 			
 			WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Appoinment Saved Successfully')]")));
-            String message = successMessage.getText();
-			System.out.println("Appointment message:" + message);
+			String message = successMessage.getText();
+			System.out.println("Appointment message: " + message);
 
 		}
 
