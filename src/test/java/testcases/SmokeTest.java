@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Brooklyn");
+		firstName.sendKeys("Scarlett");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Joseph");
+		Lastname.sendKeys("Micah");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("56");
+		age.sendKeys("46");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("2123254125");
+		phoneNumber.sendKeys("3212425758");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -179,6 +179,7 @@ public class SmokeTest extends BaseTest {
 			WebElement saveAndCloseButton = wait.until(
 					ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),' Save & Close ')]")));
 			saveAndCloseButton.click();
+			Thread.sleep(4000);
 			
 			WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Appoinment Saved Successfully')]")));
             String message = successMessage.getText();

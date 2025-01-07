@@ -59,7 +59,7 @@ public class Billing extends BaseTest {
 
 		WebElement firstRowFirstColumn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table/tbody/tr[1]/td[1]/span")));
 		String valueOfFirstRowFirstColumn = firstRowFirstColumn.getText().trim();
-        System.out.println("OP Bill Patient Code :" + valueOfFirstRowFirstColumn);
+        System.out.println("Before Payment - OP Bill Patient Code :" + valueOfFirstRowFirstColumn);
 
 		WebElement OPmenuIcon = wait
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
