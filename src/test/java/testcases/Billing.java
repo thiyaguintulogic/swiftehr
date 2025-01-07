@@ -69,8 +69,8 @@ public class Billing extends BaseTest {
 		opButton.click();
 		Thread.sleep(2000);
 		
-		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
-		searchButton.click();
+		WebElement searchButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@title='Search']")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
 		
 		WebElement SearchStatus = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 		SearchStatus.sendKeys(valueOfFirstRowFirstColumn);
