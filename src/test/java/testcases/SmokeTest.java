@@ -50,7 +50,7 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Hadley");
+		firstName.sendKeys("Victoria");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
@@ -61,7 +61,7 @@ public class SmokeTest extends BaseTest {
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("4212324524");
+		phoneNumber.sendKeys("3212452547");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -87,46 +87,46 @@ public class SmokeTest extends BaseTest {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Submit')]")));
 		submitButton.click();
 
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 
 		// Fill out the registration form for the second patient
-//		WebElement firstName2 = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-//		firstName2.sendKeys("Molly");
-//		
-//		WebElement Lastname2 = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-//		Lastname2.sendKeys("Alice");
-//
-//		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-//		age2.sendKeys("39");
-//
-//		WebElement phoneNumber2 = wait
-//				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-//		phoneNumber2.sendKeys("3212452569");
-//
-//		WebElement genderMale = wait
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));
-//		genderMale.click();
-//
-//		WebElement stateDropdown2 = wait
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='cityChange']")));
-//		Select state2 = new Select(stateDropdown2);
-//		state2.selectByVisibleText(" Tamil Nadu ");
-//
-//		WebElement cityField2 = wait.until(ExpectedConditions.elementToBeClickable(
-//				By.xpath("//*[@id=\"patientForm\"]/div[1]/div[15]/div/mat-form-field/div/div[1]")));
-//		cityField2.click();
-//
-//		WebElement cityAruppukkottai = wait
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Cuddalore')]")));
-//		cityAruppukkottai.click();
-//
-//		js.executeScript("window.scrollBy(0, 500);");
-//
-//		WebElement submitButton2 = wait
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Submit')]")));
-//		submitButton2.click();
+		WebElement firstName2 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
+		firstName2.sendKeys("Henry");
+		
+		WebElement Lastname2 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
+		Lastname2.sendKeys("Alice");
+
+		WebElement age2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
+		age2.sendKeys("39");
+
+		WebElement phoneNumber2 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
+		phoneNumber2.sendKeys("3212458758");
+
+		WebElement genderMale = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Male')]")));
+		genderMale.click();
+
+		WebElement stateDropdown2 = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='cityChange']")));
+		Select state2 = new Select(stateDropdown2);
+		state2.selectByVisibleText(" Tamil Nadu ");
+
+		WebElement cityField2 = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//*[@id=\"patientForm\"]/div[1]/div[15]/div/mat-form-field/div/div[1]")));
+		cityField2.click();
+
+		WebElement cityAruppukkottai = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Cuddalore')]")));
+		cityAruppukkottai.click();
+
+		js.executeScript("window.scrollBy(0, 500);");
+
+		WebElement submitButton2 = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Submit')]")));
+		submitButton2.click();
 
 	}
 

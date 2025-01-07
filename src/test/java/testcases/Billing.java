@@ -314,8 +314,8 @@ public class Billing extends BaseTest {
 	}
 	
 	
-		
-	public static void Scan_Bill() throws InterruptedException, AWTException {
+		@Test(priority = 2)
+		public static void Scan_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		
