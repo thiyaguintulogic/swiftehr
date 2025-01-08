@@ -183,7 +183,7 @@ public class Billing extends BaseTest {
 
 		WebElement firstRowFirstColumn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table/tbody/tr[1]/td[1]/span")));
 		String valueOfFirstRowFirstColumn = firstRowFirstColumn.getText().trim();
-        System.out.println("Lab Bill Patient Code : " + valueOfFirstRowFirstColumn);
+        System.out.println("Before Payment - Lab Bill Patient Code : " + valueOfFirstRowFirstColumn);
 
      // Lab Billing Steps
 
@@ -333,14 +333,15 @@ public class Billing extends BaseTest {
 		
 		WebElement firstRowFirstColumn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table/tbody/tr[1]/td[1]/span")));
 		String valueOfFirstRowFirstColumn = firstRowFirstColumn.getText().trim();
-        System.out.println("Scan Bill Patient Code : " + valueOfFirstRowFirstColumn);
+        System.out.println("Before Payment - Scan Bill Patient Code : " + valueOfFirstRowFirstColumn);
         
         WebElement CurrentmenuIcon = wait
  				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
  		JavascriptExecutor Currentmenuexecutor = (JavascriptExecutor) driver;
  		Currentmenuexecutor.executeScript("arguments[0].click();", CurrentmenuIcon);
 
- 		driver.findElement(By.xpath("//a[contains(text(),' Current Admissions')]")).click();
+ 		driver.findElement(By.xpath("//a[contains(text(),' Current Admissions')]")).click();	
+ 		
  		Thread.sleep(3000);
 
  		WebElement searchButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@title='Search']")));
