@@ -245,8 +245,8 @@ public class Billing extends BaseTest {
 		JavascriptExecutor Labexecutor = (JavascriptExecutor) driver;
 		Labexecutor.executeScript("arguments[0].click();", LabtmenuIcon);
 		
-		WebElement labLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[text()=' Lab'])[1]")));
-		labLink.click();
+		WebElement lablink = driver.findElement(By.xpath("(//a[text()=' Lab'])[1]"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", lablink);
 		Thread.sleep(2000);
 		
 		WebElement searchButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
@@ -327,9 +327,11 @@ public class Billing extends BaseTest {
 		executor.executeScript("arguments[0].click();", menuIcon);
 		Thread.sleep(5000);
 
-		WebElement viewAppointmentsButton = wait
-			    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
-			wait.until(ExpectedConditions.elementToBeClickable(viewAppointmentsButton)).click();
+//		WebElement viewAppointmentsButton = wait
+//			    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
+//			wait.until(ExpectedConditions.elementToBeClickable(viewAppointmentsButton)).click();
+		WebElement viewAppointmentsButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(text(),' View Appointments')]")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", viewAppointmentsButton);
 		
 		WebElement firstRowFirstColumn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table/tbody/tr[1]/td[1]/span")));
 		String valueOfFirstRowFirstColumn = firstRowFirstColumn.getText().trim();
