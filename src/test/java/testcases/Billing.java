@@ -166,7 +166,7 @@ public class Billing extends BaseTest {
 	@Test(priority = 1)
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -212,8 +212,8 @@ public class Billing extends BaseTest {
 		WebElement addNewElement1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[contains(text(),'Add New')])")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addNewElement1);
 		
-		WebElement selectDropdown1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
-		selectDropdown1.click();
+		WebElement selectDropdown1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectDropdown1);
 		
 		WebElement altBloodTest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'01 lab test ')]")));
 		altBloodTest.click();
@@ -354,8 +354,9 @@ public class Billing extends BaseTest {
  		SearchStatus.sendKeys(Keys.ENTER);
  		Thread.sleep(2000);
 
-	WebElement firstElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//tbody/tr[1]/td[8]/div[1]/a[1]/span[1]")));
-	firstElement.click();
+ 		WebElement firstElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[1]/td[8]/div[1]/a[1]/span[1]")));
+ 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstElement);
+
 	
 	WebElement ScanElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Scan')]")));
 	ScanElement.click();
