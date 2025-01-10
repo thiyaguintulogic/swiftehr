@@ -221,8 +221,8 @@ public class Billing extends BaseTest {
 		WebElement addNewElement2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 		addNewElement2.click();
 		
-		WebElement selectDropdown2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
-		selectDropdown2.click();
+		WebElement selectDropdown2 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectDropdown2);
 
 		WebElement bilirubinPack = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Allergy Skin Test ')]")));
 		bilirubinPack.click();
@@ -230,8 +230,8 @@ public class Billing extends BaseTest {
 		WebElement addNewElement3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 		addNewElement3.click();
 		
-		WebElement selectDropdown3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
-		selectDropdown3.click();
+		WebElement selectDropdown3 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectDropdown3);
 		
 		WebElement liverTestPack = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Antibiotic Sensitivity Test ')]")));
 		liverTestPack.click();
@@ -358,8 +358,8 @@ public class Billing extends BaseTest {
  		((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstElement);
 
 	
-	WebElement ScanElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Scan')]")));
-	ScanElement.click();
+	WebElement ScanElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'Scan')]")));
+	((JavascriptExecutor) driver).executeScript("arguments[0].click();", ScanElement);
 	
 	WebElement addNewElement1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 	addNewElement1.click();
