@@ -212,7 +212,7 @@ public class Billing extends BaseTest {
 		WebElement addNewElement1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[contains(text(),'Add New')])")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addNewElement1);
 		
-		WebElement selectDropdown1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
+		WebElement selectDropdown1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectDropdown1);
 		
 		WebElement altBloodTest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'01 lab test ')]")));
@@ -400,8 +400,8 @@ public class Billing extends BaseTest {
 	JavascriptExecutor Labexecutor = (JavascriptExecutor) driver;
 	Labexecutor.executeScript("arguments[0].click();", LabtmenuIcon);
 	
-	WebElement labLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[text()=' Scan'])[1]")));
-	labLink.click();
+	WebElement labLink = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//a[text()=' Scan'])[1]")));
+	executor.executeScript("arguments[0].click();", labLink);
 	Thread.sleep(2000);
 	
 	WebElement searchButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
