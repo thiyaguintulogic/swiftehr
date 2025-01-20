@@ -209,7 +209,7 @@ public class Billing extends BaseTest {
 		WebElement labElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Lab')]")));
 		labElement.click();
 		
-		WebElement addNewElement1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[contains(text(),'Add New')])")));
+		WebElement addNewElement1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[contains(text(),'Add New')])")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addNewElement1);
 		
 		WebElement selectDropdown1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
@@ -346,7 +346,7 @@ public class Billing extends BaseTest {
  		((JavascriptExecutor) driver).executeScript("arguments[0].click();", currentAdmissionsLink);
  		Thread.sleep(3000);
 
- 		WebElement searchButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@title='Search']")));
+ 		WebElement searchButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Search']")));
  		((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
  		
  		WebElement SearchStatus = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));

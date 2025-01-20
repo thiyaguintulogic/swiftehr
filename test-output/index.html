@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Billing" class="method navigator-link" hash-for-method="Lab_Bill">Lab_Bill</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Billing" class="method navigator-link" hash-for-method="Scan_Bill">Scan_Bill</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,11 +123,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.SmokeTest" class="method navigator-link" hash-for-method="Create_Appointment">Create_Appointment</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Billing" class="method navigator-link" hash-for-method="Lab_Bill">Lab_Bill</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -126,11 +140,6 @@
                         <a href="#" panel-name="suite-Suite" title="testcases.SmokeTest" class="method navigator-link" hash-for-method="PatientRegistration">PatientRegistration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Billing" class="method navigator-link" hash-for-method="Scan_Bill">Scan_Bill</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -143,9 +152,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testcases.Billing</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -154,13 +163,18 @@
                   <a name="Lab_Bill">
                   </a> <!-- Lab_Bill -->
                   <span class="method-name">Lab_Bill</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="OPBill">
-                  </a> <!-- OPBill -->
-                  <span class="method-name">OPBill</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[contains(text(),&apos;01 lab test &apos;)] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61507}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61507/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5dc89fc40d3ca7507e9d4819fe7cd53
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at testcases.Billing.Lab_Bill(Billing.java:218)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -168,6 +182,43 @@
                   <a name="Scan_Bill">
                   </a> <!-- Scan_Bill -->
                   <span class="method-name">Scan_Bill</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-jbk-c146=&quot;&quot; type=&quot;button&quot; title=&quot;Search&quot; class=&quot;list-table-action-btn btn btn-sm btn-default&quot; style=&quot;height: 24px; padding: 4px 4px!important;&quot;&gt;...&lt;/button&gt; is not clickable at point (1292, 160). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade show&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=131.0.6778.265)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5dc89fc40d3ca7507e9d4819fe7cd53, clickElement {id=f.7BDB942B16BC3C1EEB33B6EA655AB97E.d.C7E570C3AE2CFBF359174D10A1E21FF6.e.964}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61507}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61507/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c5dc89fc40d3ca7507e9d4819fe7cd53)] -&gt; xpath: //button[@title=&apos;Search&apos;]]
+Session ID: c5dc89fc40d3ca7507e9d4819fe7cd53
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at testcases.Billing.Scan_Bill(Billing.java:408)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.Billing</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="OPBill">
+                  </a> <!-- OPBill -->
+                  <span class="method-name">OPBill</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -259,27 +310,27 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Lab_Bill')
 data.setCell(0, 2, 'testcases.Billing')
-data.setCell(0, 3, 32068);
+data.setCell(0, 3, 70613);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Scan_Bill')
-data.setCell(1, 2, 'testcases.Billing')
-data.setCell(1, 3, 31043);
+data.setCell(1, 1, 'Logintest')
+data.setCell(1, 2, 'testcases.SmokeTest')
+data.setCell(1, 3, 33268);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'OPBill')
 data.setCell(2, 2, 'testcases.Billing')
-data.setCell(2, 3, 25775);
+data.setCell(2, 3, 28187);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Logintest')
-data.setCell(3, 2, 'testcases.SmokeTest')
-data.setCell(3, 3, 14265);
+data.setCell(3, 1, 'Scan_Bill')
+data.setCell(3, 2, 'testcases.Billing')
+data.setCell(3, 3, 23593);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'Create_Appointment')
 data.setCell(4, 2, 'testcases.SmokeTest')
-data.setCell(4, 3, 10608);
+data.setCell(4, 3, 15731);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'PatientRegistration')
 data.setCell(5, 2, 'testcases.SmokeTest')
-data.setCell(5, 3, 7232);
+data.setCell(5, 3, 8128);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -338,37 +389,41 @@ return data;
               <div class="chronological-class-name">testcases.SmokeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Logintest</span>
-                <span class="method-start">7967 ms</span>
+                <span class="method-start">75452 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PatientRegistration</span>
-                <span class="method-start">22239 ms</span>
+                <span class="method-start">108742 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Create_Appointment</span>
-                <span class="method-start">29482 ms</span>
+                <span class="method-start">116878 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Billing</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">OPBill</span>
-                <span class="method-start">40098 ms</span>
+                <span class="method-start">132616 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Lab_Bill</span>
-                <span class="method-start">65880 ms</span>
+                <span class="method-start">160807 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Scan_Bill</span>
-                <span class="method-start">97950 ms</span>
+                <span class="method-start">231434 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">base.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">128996 ms</span>
+                <span class="method-start">255030 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
