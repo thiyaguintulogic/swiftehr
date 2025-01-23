@@ -39,7 +39,7 @@ public class Billing extends BaseTest {
 
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 0, description = "Generated the (OP) bill")
 	public static void OPBill() throws AWTException, InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -163,7 +163,7 @@ public class Billing extends BaseTest {
 	}
 
 		
-	@Test(priority = 1)
+	@Test(priority = 1,description = "Generated the (Lab) bill")
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -318,7 +318,7 @@ public class Billing extends BaseTest {
 	}
 	
 	
-		@Test(priority = 2)
+		@Test(priority = 2, description = "Generated the (Scan) bill")
 		public static void Scan_Bill() throws InterruptedException, AWTException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));

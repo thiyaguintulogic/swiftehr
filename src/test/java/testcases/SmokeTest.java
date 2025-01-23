@@ -16,7 +16,7 @@ import io.netty.handler.timeout.TimeoutException;
 
 public class SmokeTest extends BaseTest {
 
-	@Test(priority = 0)
+	@Test(priority = 0, description = "This test validates the login functionality of the application")
 	public static void Logintest() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -37,7 +37,7 @@ public class SmokeTest extends BaseTest {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, description = "Tested the patient registration functionality")
 	public static void PatientRegistration() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Vanessa");
+		firstName.sendKeys("Angela");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Brandon");
+		Lastname.sendKeys("Garrett");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("33");
+		age.sendKeys("65");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("2541256325");
+		phoneNumber.sendKeys("4212325875");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
@@ -131,7 +131,7 @@ public class SmokeTest extends BaseTest {
 	}
 
 	
-	@Test(priority = 2)
+	@Test(priority = 2, description = "Verifying the appointment confirmation")
 	public static void Create_Appointment() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
