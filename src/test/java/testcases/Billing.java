@@ -196,7 +196,12 @@ public class Billing extends BaseTest {
      		admissionsLink.click();
      		
      		Thread.sleep(4000);
+//     		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+//     		((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
+     		
      		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
+     		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", searchButton);
+     		Thread.sleep(500); // Allow time for any overlays to disappear
      		((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
      		
      		WebElement SearchStatus = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
