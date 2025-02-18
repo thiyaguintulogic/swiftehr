@@ -194,9 +194,8 @@ public class Billing extends BaseTest {
 
      		WebElement admissionsLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' Current Admissions')]")));
      		admissionsLink.click();
+     		Thread.sleep(5000);
      		
-     		Thread.sleep(4000);
-     		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("toast-right-top")));
      		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
      		((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
      		
