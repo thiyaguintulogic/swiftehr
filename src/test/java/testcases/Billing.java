@@ -252,7 +252,8 @@ public class Billing extends BaseTest {
 		Thread.sleep(2000);
 		
 		WebElement searchButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
-		searchButton1.click();
+ 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton1);
+		
 		
 		WebElement SearchPatient = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 		SearchPatient.sendKeys(valueOfFirstRowFirstColumn);
@@ -446,9 +447,9 @@ public class Billing extends BaseTest {
 	
 	driver.findElement(By.xpath("(//a[text()=' Scan'])[1]")).click();
 	Thread.sleep(2000);
-
+	
 	WebElement searchButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
-	searchButton2.click();
+	((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton2);
 	
 	WebElement SearchStatus_OP = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 	SearchStatus_OP.sendKeys(valueOfFirstRowFirstColumn);
