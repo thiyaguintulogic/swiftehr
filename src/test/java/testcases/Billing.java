@@ -193,7 +193,7 @@ public class Billing extends BaseTest {
      		Currentmenuexecutor.executeScript("arguments[0].click();", CurrentmenuIcon);
 
      		WebElement admissionsLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' Current Admissions')]")));
-     		admissionsLink.click();
+     		((JavascriptExecutor) driver).executeScript("arguments[0].click();", admissionsLink);
      		Thread.sleep(5000);
      		
      		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
