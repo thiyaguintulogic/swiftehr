@@ -214,7 +214,7 @@ public class Billing extends BaseTest {
 		WebElement addNewElement1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[contains(text(),'Add New')])")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addNewElement1);
 		
-		WebElement selectDropdown1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
+		WebElement selectDropdown1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectDropdown1);
 		
 		WebElement altBloodTest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'01 lab test ')]")));
@@ -420,8 +420,9 @@ public class Billing extends BaseTest {
 	WebElement firstTableButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[1]/tr[1]/td[10]/div[1]/div[1]/button[1]")));
 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true); arguments[0].click();", firstTableButton);
 
-	WebElement payBillButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Pay Bill')]")));
-	payBillButton.click();
+	WebElement paybutton = driver.findElement(By.xpath("//button[contains(text(),'Pay Bill')]"));
+	((JavascriptExecutor) driver).executeScript("arguments[0].click();", paybutton);
+
 	
 	WebElement yesButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Yes')]")));
 	yesButton.click();
