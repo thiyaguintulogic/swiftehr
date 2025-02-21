@@ -50,18 +50,18 @@ public class SmokeTest extends BaseTest {
 		// Fill out the registration form for the first patient
 		WebElement firstName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
-		firstName.sendKeys("Allison");
+		firstName.sendKeys("Brittany");
 		
 		WebElement Lastname = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
-		Lastname.sendKeys("Steven");
+		Lastname.sendKeys("Mason");
 
 		WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
-		age.sendKeys("57");
+		age.sendKeys("41");
 
 		WebElement phoneNumber = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
-		phoneNumber.sendKeys("3212452536");
+		phoneNumber.sendKeys("4212324587");
 
 		WebElement genderFemale = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Female')]")));
