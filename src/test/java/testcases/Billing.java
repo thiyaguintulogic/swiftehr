@@ -447,7 +447,8 @@ public class Billing extends BaseTest {
 	JavascriptExecutor executor_OP = (JavascriptExecutor) driver;
 	executor_OP.executeScript("arguments[0].click();", menuIcon_OP);
 	
-	driver.findElement(By.xpath("(//a[text()=' Scan'])[1]")).click();
+	WebElement scanLink = driver.findElement(By.xpath("(//a[text()=' Scan'])[1]"));
+	((JavascriptExecutor) driver).executeScript("arguments[0].click();", scanLink);
 	Thread.sleep(2000);
 	
 	WebElement searchButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Search']")));
