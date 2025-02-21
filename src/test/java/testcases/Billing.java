@@ -166,7 +166,7 @@ public class Billing extends BaseTest {
 	@Test(priority = 1,description = "Generated the (Lab) bill")
 	public static void Lab_Bill() throws InterruptedException, AWTException {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 		
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -415,17 +415,16 @@ public class Billing extends BaseTest {
 	WebElement SearchPatient = driver.findElement(By.xpath("//thead/tr[2]/th[1]/input[1]"));
 	SearchPatient.sendKeys(valueOfFirstRowFirstColumn);
 	SearchPatient.sendKeys(Keys.ENTER);
-	Thread.sleep(2000);
+	Thread.sleep(4000);
 	
-	WebElement firstTableButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//tbody[1]/tr[1]/td[10]/div[1]/div[1]/button[1]")));
-	firstTableButton.click();
-	
+	WebElement firstTableButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[1]/tr[1]/td[10]/div[1]/div[1]/button[1]")));
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true); arguments[0].click();", firstTableButton);
+
 	WebElement payBillButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Pay Bill')]")));
 	payBillButton.click();
 	
 	WebElement yesButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Yes')]")));
 	yesButton.click();
-	
 	Thread.sleep(2000);
 	
 	Actions actions = new Actions(driver);
