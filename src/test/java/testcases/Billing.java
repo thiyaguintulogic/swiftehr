@@ -217,8 +217,8 @@ public class Billing extends BaseTest {
 		WebElement selectDropdown1 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//mat-select[@placeholder='Select'])[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectDropdown1);
 		
-		WebElement altBloodTest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'01 lab test ')]")));
-		altBloodTest.click();
+		WebElement altBloodTest = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'01 lab test ')]")));
+		wait.until(ExpectedConditions.elementToBeClickable(altBloodTest)).click();
 		
 		WebElement addNewElement2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Add New')])")));
 		addNewElement2.click();
@@ -324,7 +324,7 @@ public class Billing extends BaseTest {
 		@Test(priority = 2, description = "Generated the (Scan) bill")
 		public static void Scan_Bill() throws InterruptedException, AWTException {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 		
 		WebElement menuIcon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#mega-menu-nav-btn")));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -420,8 +420,10 @@ public class Billing extends BaseTest {
 	WebElement firstTableButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[1]/tr[1]/td[10]/div[1]/div[1]/button[1]")));
 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true); arguments[0].click();", firstTableButton);
 
-	WebElement paybutton = driver.findElement(By.xpath("//button[contains(text(),'Pay Bill')]"));
-	((JavascriptExecutor) driver).executeScript("arguments[0].click();", paybutton);
+	WebElement payButton = driver.findElement(By.xpath("//button[contains(text(),'Pay Bill')]"));
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", payButton);
+	Thread.sleep(1000);
+	((JavascriptExecutor) driver).executeScript("arguments[0].click();", payButton);
 
 	
 	WebElement yesButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Yes')]")));
