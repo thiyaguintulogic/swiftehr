@@ -1,5 +1,7 @@
 package testcases;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -10,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import base.BaseTest;
 import io.netty.handler.timeout.TimeoutException;
@@ -37,7 +42,7 @@ public class SmokeTest extends BaseTest {
 
 	}
 
-	@Test(priority = 1, description = "patient registration functionality")
+	
 	public static void PatientRegistration() throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -317,5 +322,58 @@ public class SmokeTest extends BaseTest {
 	        System.out.println("Message: " + message);
 	    }
 	}
+	
+	@Test(priority = 1, description = "patient registration functionality")
+	public static void PatientRegistrationJson() throws InterruptedException, IOException {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    
+	 // Click on 'Patient Registration'
+	 		WebElement patientRegistration = wait.until(
+	 				ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' Patient Registration')]")));
+	 		patientRegistration.click();
+	    
+
+	    // Read JSON file
+	    ObjectMapper objectMapper = new ObjectMapper();
+	    JsonNode rootNode = objectMapper.readTree(new File(System.getProperty("user.dir") + "/src/test/resources/patients.json"));
+	    JsonNode patients = rootNode.get("patients");
+
+	    // Iterate through each patient in JSON
+	    for (JsonNode patient : patients) {
+	        WebElement firstName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='First Name']")));
+	        firstName.sendKeys(patient.get("firstName").asText());
+
+	        WebElement lastName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='text'])[2]")));
+	        lastName.sendKeys(patient.get("lastName").asText());
+
+	        WebElement age = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Age']")));
+	        age.sendKeys(patient.get("age").asText());
+
+	        WebElement phoneNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='Phone Number']")));
+	        phoneNumber.sendKeys(patient.get("phoneNumber").asText());
+
+	        WebElement gender = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'" + patient.get("gender").asText() + "')]")));
+	        gender.click();
+
+	        WebElement stateDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='cityChange']")));
+	        Select state = new Select(stateDropdown);
+	        state.selectByVisibleText(" " + patient.get("state").asText() + " ");
+
+	        WebElement cityField = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"patientForm\"]/div[1]/div[15]/div/mat-form-field/div/div[1]")));
+	        cityField.click();
+
+	        WebElement city = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'" + patient.get("city").asText() + "')]")));
+	        city.click();
+
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("window.scrollBy(0, 500);");
+
+	        WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Submit')]")));
+	        submitButton.click();
+
+	        Thread.sleep(5000);
+	    }
+	}
+	
 	
 }

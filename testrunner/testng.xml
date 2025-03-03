@@ -8,4 +8,5 @@
       <class name="testcases.Billing"/> 
     </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

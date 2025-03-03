@@ -1,0 +1,23 @@
+{
+  "patients": [
+    {
+      "firstName": "Rahul",
+      "lastName": "Shankar",
+      "age": "35",
+      "phoneNumber": "7654321098",
+      "gender": "Male",
+      "state": "Tamil Nadu",
+      "city": "Trichy"
+    },
+    {
+      "firstName": "Priya",
+      "lastName": "Siva",
+      "age": "28",
+      "phoneNumber": "6543210987",
+      "gender": "Female",
+      "state": "Tamil Nadu",
+      "city": "Chennai"
+    }
+    
+  ]
+}

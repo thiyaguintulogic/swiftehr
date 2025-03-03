@@ -158,7 +158,7 @@ public class Billing extends BaseTest {
 
 		System.out.println("After paying the OP Bill - Patient Code : " + AfterPaidPatientCode);
 		System.out.println("After paying the OP Bill - Bill Number  : " + AfterPaidBillnumber);
-		System.out.println("After paying the OP Bill - Bill Number  : " + AfterPaidBillDate);
+		System.out.println("After paying the OP Bill - Bill Date    : " + AfterPaidBillDate);
 		System.out.println("After paying the OP Bill - Bill Status  : " + AfterPaidStatus);
 	}
 
@@ -316,7 +316,7 @@ public class Billing extends BaseTest {
 
 		System.out.println("After paying the Lab Bill - Patient Code : " + AfterPaidPatientCode);
 		System.out.println("After paying the Lab Bill - Bill Number  : " + AfterPaidBillnumber);
-		System.out.println("After paying the Lab Bill - Bill Number  : " + AfterPaidBillDate);
+		System.out.println("After paying the Lab Bill - Bill Date    : " + AfterPaidBillDate);
 		System.out.println("After paying the Lab Bill - Bill Status  : " + AfterPaidStatus);
 	}
 	
@@ -475,7 +475,7 @@ public class Billing extends BaseTest {
 
 	System.out.println("After paying the Scan Bill - Patient Code : " + AfterPaidPatientCode);
 	System.out.println("After paying the Scan Bill - Bill Number  : " + AfterPaidBillnumber);
-	System.out.println("After paying the Scan Bill - Bill Number  : " + AfterPaidBillDate);
+	System.out.println("After paying the Scan Bill - Bill Date    : " + AfterPaidBillDate);
 	System.out.println("After paying the Scan Bill - Bill Status  : " + AfterPaidStatus);
 		
 	}
